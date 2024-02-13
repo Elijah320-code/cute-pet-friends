@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adorable Animal Friends</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&display=swap">
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            background-color: #b5d6f7; /* Light grey background for contrast */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Adorable Animal Friends</h1>
+    <div class="row">
+        <!-- Pet 1: Sloth -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Snuggles', 'Meet Snuggles, the adorable sloth! Snuggles loves to relax and take things slow.', 'because-baby-animals-cute (1)sloth.gif')">
+            <div class="pet">
+                <img src="because-baby-animals-cute (1)sloth.gif" alt="Sloth" class="img-fluid">
+                <p class="pet-name">Snuggles</p>
+            </div>
+        </div>
+        <!-- Pet 2: Bird -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Tweetie', 'This is Tweetie, the chirpy little birdie! Tweetie loves to sing and fly around.', 'because-baby-animals-cute.gif')">
+            <div class="pet">
+                <img src="because-baby-animals-cute.gif" alt="Bird" class="img-fluid">
+                <p class="pet-name">Tweetie</p>
+            </div>
+        </div>
+        <!-- Pet 3: Dog -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Max', 'Meet Max, the playful pup! Max is always excited to go for walks and play fetch.', 'dance-cutedog.gif')">
+            <div class="pet">
+                <img src="dance-cutedog.gif" alt="Dog" class="img-fluid">
+                <p class="pet-name">Max</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Pet 4: Bunny -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Floppy', 'This is Floppy, the fluffy bunny! Floppy loves munching on carrots and hopping around.', 'excited-molangfluffy.gif')">
+            <div class="pet">
+                <img src="excited-molangfluffy.gif" alt="Bunny" class="img-fluid">
+                <p class="pet-name">Floppy</p>
+            </div>
+        </div>
+        <!-- Pet 5: Cat -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Whiskers', 'Meet Whiskers, the adorable kitty! Whiskers enjoys cuddling and chasing after toys.', 'peachcat-cat.gif')">
+            <div class="pet">
+                <img src="peachcat-cat.gif" alt="Cat" class="img-fluid">
+                <p class="pet-name">Whiskers</p>
+            </div>
+        </div>
+        <!-- Pet 6: Penguin -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Waddle', 'This is Waddle, the happy penguin! Waddle loves sliding on ice and swimming in the ocean.', 'penguin-happy.gif')">
+            <div class="pet">
+                <img src="penguin-happy.gif" alt="Penguin" class="img-fluid">
+                <p class="pet-name">Waddle</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Pet 7: Racoon -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Bandit', 'Meet Bandit, the mischievous raccoon! Bandit loves scavenging for treats and climbing trees.', 'racoon-baby-animals-cute (1).gif')">
+            <div class="pet">
+                <img src="racoon-baby-animals-cute (1).gif" alt="Raccoon" class="img-fluid">
+                <p class="pet-name">Bandit</p>
+            </div>
+        </div>
+        <!-- Pet 8: Seal -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Splash', 'This is Splash, the playful seal! Splash enjoys swimming and basking in the sun.', 'seababy-animals-cute (1).gif')">
+            <div class="pet">
+                <img src="seababy-animals-cute (1).gif" alt="Seal" class="img-fluid">
+                <p class="pet-name">Splash</p>
+            </div>
+        </div>
+        <!-- Pet 9: Birdy -->
+        <div class="col-md-4 mb-4" onclick="showPetInfo('Birdy', 'Meet Birdy, the cuddly cute bird who loves to dance to Jazz!', 'birdbaby-animals-cute (1).gif')">
+            <div class="pet">
+                <img src="birdbaby-animals-cute (1).gif" alt="Birdy" class="img-fluid">
+                <p class="pet-name">Birdy</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Structure for displaying pet info -->
+<div id="petInfoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="petInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: #FFB6C1;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="petInfoModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="petInfoImage" src="" alt="Pet" class="img-fluid mb-3">
+                <p id="petInfoDescription"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery, Popper.js, and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript File -->
+<script>
+    function showPetInfo(name, description, image) {
+        $('#petInfoModalLabel').text(name);
+        $('#petInfoDescription').text(description);
+        $('#petInfoImage').attr('src', image);
+        $('#petInfoModal').modal('show');
+    }
+
+    $(document).ready(function() {
+        $('#petInfoModal').on('hidden.bs.modal', function (e) {
+            resetModal();
+        });
+    });
+
+    function resetModal() {
+        $('#petInfoModalLabel').text('');
+        $('#petInfoDescription').text('');
+        $('#petInfoImage').attr('src', '');
+    }
+</script>
+
+</body>
+</html>

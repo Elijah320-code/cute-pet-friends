@@ -1,0 +1,45 @@
+body {
+    background-color: #b5d6f7; /* Light grey background for contrast */
+}
+
+.pet {
+    cursor: pointer; /* Indicates clickable items */
+    border: 1px solid #eaaee8; /* Light grey border for pet divs */
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners for pet divs */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.pet:hover {
+    transform: scale(1.05); /* Slightly enlarge pet divs on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect on hover */
+}
+
+.pet img {
+    max-height: 200px; /* Restrict images to a reasonable size */
+    width: auto;
+    display: block;
+    margin: 0 auto 10px; /* Center images and add space below */
+}
+
+.pet-name {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px; /* Add some spacing below the pet name */
+}
+
+.pet-description {
+    text-align: center;
+    color: #6c757d; /* Dark grey color for text */
+}
+
+.custom-modal-dialog .modal-content {
+    background-color: #ffc0cb; /* Light pink background for modal content */
+}
+.modal-open {
+    overflow: hidden;
+    background-color: rgba(255, 192, 203, 0.5); /* Light pink background color with some transparency */
+}
+.modal-content {
+    background-color: #FFB6C1; /* Light pink background color */
+}
